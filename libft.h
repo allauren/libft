@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 23:24:12 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/06 01:12:42 by allauren         ###   ########.fr       */
+/*   Updated: 2017/10/09 22:45:03 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ void	ft_putnbr(int nb);
 void	*ft_memcpy(void* dest, const void* src, size_t count);
 void	*ft_memccpy(void* dest, const void* src, int c, size_t count);
 int		ft_strlen(char *c);
+void	*ft_memchr(void *ptr, int value, size_t num );
+int		ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
+void	*ft_memmove(void *dest, const void *src, size_t num);
+char	*ft_strcpy(char *dest, const char *src);
 
 
 
