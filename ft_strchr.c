@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/10 21:57:07 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/10 22:33:04 by allauren         ###   ########.fr       */
+/*   Created: 2017/10/10 22:55:38 by allauren          #+#    #+#             */
+/*   Updated: 2017/10/10 23:08:33 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strncat(char * destination, const char *source, size_t num)
+char	*ft_strchr(char *str, int c)
 {
-	unsigned int i;
-	unsigned int j;
+	int i;
 
 	i = 0;
-	j = 0;
-	while(dest[i])
-		i++;
-	while(src[j])
+	while(str[i] || str[i-1])
 	{
-		dest[i] = src[j];
+		if(str[i] == c)
+			return (&str[i]);
 		i++;
-		j++;
 	}
-	dest[i] = src[i];
-	return (dest);
+	return (0);
 }

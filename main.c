@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		ft_putstr ("\ntest de memcpy avec argv 2 dest de argv 1 et 3 caractere\n");
 		ft_putstr(ft_memcpy(argv[2], argv[1], 3));
 		ft_putstr("\n on cherche maintenant c avec ft_memccpy jusqu au caractere 4\n");
-		ft_putstr("et on check avec memchr si c est bien present \n");
+		ft_putstr("et on check avec memchr si c est bien present et on verifie  avec ft_strchr \n");
 		if(!ft_memccpy(argv[2], argv[1], 'c', 5))
 		{
 			ft_putstr("pas trouve merci de saisir c dans argv[2] pour continuer les tests");
@@ -32,6 +32,8 @@ int main(int argc, char *argv[])
 		else
 		{
 			ft_putstr(ft_memccpy(argv[2], argv[1], 'c', 4));
+			ft_putchar('\n');
+			ft_putstr(ft_strchr(argv[2], 'x'));
 			ft_putchar('\n');
 			ft_putstr(argv[2]);
 		}
@@ -60,6 +62,14 @@ int main(int argc, char *argv[])
 	ft_putstr(argv[1]);
 	ft_putstr("\nje verifie que ft_strdup me renvoie bien argv[1]\n");
 	ft_putstr(ft_strdup(argv[1]));
+	ft_putstr("je verifie ft_strcat ft_strcpy ft_strncat avec et les textes 'ale''xis'\n");
+	char src[10]="xis", dest[10]="ale";
+	ft_putstr(ft_strcat(dest, src));
+	ft_putstr("\nft_strncpy de alexis 3 caracteres dans src qui contient xis\n");
+	ft_putstr(ft_strncpy(src, dest, 3));
+	ft_putstr("\net on ft_strncat tout ca a 9 caracteres en commencant par dest\n");
+	ft_putstr(ft_strncat(dest,src,9));
+		
 		}
 		else
 	ft_putstr("Bonjour, afi de tester les differentes fonctions merci de saisir 2 arguments avec argv2 avec des c");
