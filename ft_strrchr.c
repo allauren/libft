@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 23:08:34 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/10 23:16:52 by allauren         ###   ########.fr       */
+/*   Updated: 2017/10/10 23:28:24 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ char	*ft_strrchr(char * str, int character)
 	ret = NULL;
 	while(str[i])
 	{
+		if(ft_strchr(&str[i], character))
 		ret = ft_strchr(&str[i], character);
-		i++;\
+		i++;
 	}
 	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 23:24:12 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/10 23:05:03 by allauren         ###   ########.fr       */
+/*   Updated: 2017/10/11 00:20:17 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*ft_strcat(char * destination, const char *source);
 char	*ft_strncpy (char * dest, const char *src, size_t num);
 char	*ft_strncat(char * dest, const char *src, size_t num);
 char	*ft_strchr(char *str, int c);
+char	*ft_strrchr(char * str, int character);
+char	*ft_strstr (char * str1, const char * str2);
 
 
 
