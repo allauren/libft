@@ -22,10 +22,10 @@ int main(int argc, char *argv[])
 		ft_putstr ("\ntest de memcpy avec argv 2 dest de argv 1 et 3 caractere\n");
 		ft_putstr(ft_memcpy(argv[2], argv[1], 3));
 		ft_putstr("\n on cherche maintenant c avec ft_memccpy jusqu au caractere 4\n");
-		ft_putstr("et on check avec memchr si c est bien present ");
+		ft_putstr("et on check avec memchr si c est bien present \n");
 		if(!ft_memccpy(argv[2], argv[1], 'c', 5))
 		{
-			ft_putstr("pas trouve");
+			ft_putstr("pas trouve merci de saisir c dans argv[2] pour continuer les tests");
 			ft_putchar('\n');
 			ft_putstr(argv[2]);
 		}
@@ -58,6 +58,11 @@ int main(int argc, char *argv[])
 	ft_putstr(" \net je copie ce resultat dans un argv 1 grace a ft_strcpy\n");
 	ft_strcpy(argv[1], str);
 	ft_putstr(argv[1]);
+	ft_putstr("\nje verifie que ft_strdup me renvoie bien argv[1]\n");
+	ft_putstr(ft_strdup(argv[1]));
 		}
+		else
+	ft_putstr("Bonjour, afi de tester les differentes fonctions merci de saisir 2 arguments avec argv2 avec des c");
+
 	return 0;
 }
