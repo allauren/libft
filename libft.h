@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 23:24:12 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/11 00:20:17 by allauren         ###   ########.fr       */
+/*   Updated: 2017/10/11 02:33:45 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,15 @@ char	*ft_strncat(char * dest, const char *src, size_t num);
 char	*ft_strchr(char *str, int c);
 char	*ft_strrchr(char * str, int character);
 char	*ft_strstr (char * str1, const char * str2);
-
-
-
-
+char	*ft_strnew(size_t size);
+void	ft_memdel(void **ap);
+void	*ft_memalloc(size_t size);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmap(char const *s, char (*f)(char));
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 
 #endif
