@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 00:14:38 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/11 00:23:36 by allauren         ###   ########.fr       */
+/*   Updated: 2017/10/25 00:22:18 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,3 @@ char	*ft_strstr (char * str1, const char * str2)
 	}
 	return(NULL);
 }
-
-int main ()
-{
-  char str[] ="This is a simple string";
-    char * pch;
-	  pch = ft_strstr (str,"simple");
-	    strncpy (pch,"sample",6);
-		  puts (str);
-		    return 0;
-			}
-

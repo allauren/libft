@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 00:39:22 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/11 00:44:35 by allauren         ###   ########.fr       */
+/*   Updated: 2017/10/25 00:20:08 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	*ft_memalloc(size_t size)
 {
-	size_t	*tr
+	char	*ptr;
 
+	if(!(ptr = (char*)malloc(sizeof(char) * (size + 1))))
+		return (NULL);
+	return (ptr);
+}
