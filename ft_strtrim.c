@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/05 23:47:09 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/26 02:44:34 by allauren         ###   ########.fr       */
+/*   Created: 2017/10/25 01:41:32 by allauren          #+#    #+#             */
+/*   Updated: 2017/10/25 02:56:01 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nb)
+char	*ft_strtrim(char const *s)
 {
-	long jack;
-	long i;
+	int		i;
+	int		begin;
+	int		end;
+	char	*str;
 
-	jack = nb;
-	i = 1;
-	if (nb < 0)
+	i = 0;
+	while (s[i] == ' ' || s[i]=='\n' || s[i]=='\t')
+		i++;
+	begin = i;
+	end = i;
+	while (s[i])
 	{
-		jack = -jack;
-		ft_putchar('-');
+		if (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
+			end = i + 1;
+		i++;
 	}
-	while (i <= jack)
-		i = i * 10;
-	while(jack > 9)
+	if (!(str = (char*)malloc(sizeof(char) * (end - begin + 1))))
+		return (NULL);
+	i = 0;
+	while (i < (end - begin))
 	{
-		i = i / 10;
-		ft_putchar(jack / i + '0');
-		jack = jack % i;
+		str[i] = s[begin + i];
+		i++;
 	}
-	ft_putchar(jack / 1 + '0');
+	str[i] = '\0';
+	return (str);
 }

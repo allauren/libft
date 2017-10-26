@@ -13,7 +13,7 @@
 
 #include "libft.h"
 
-int main(int argc, char *argv[])
+int main(void)
 {
 	char	str[]="alexis               ";
 	ft_putstr("test de ft_memset avec mon prenom remplace par des * sur les 3 premiers\n");
@@ -45,11 +45,14 @@ int main(int argc, char *argv[])
 	else
 		ft_putstr("ft_memmove en erreur test de ft_memchr sur x\n");
 	ft_putstr(ft_memchr(str, 'x', sizeof(str)));
-	ft_putstr("\n on va comparer maintenant avec mon nom prenom si strcmp fonctionne \n");
-	if(!(ft_strcmp(str, "laurent alexis")))
-		ft_putstr("ft_strcmp fonctionne on va maintenant verifier que la longueur est bien de 14");
+	ft_putstr("\non va comparer maintenant avec mon nom prenom si strcmp fonctionne \n");
+	if(!(ft_memcmp(str, "laurent alexis", sizeof(str))))
+		ft_putstr("ft_strcmp fonctionne on va maintenant verifier que la longueur est bien de 14\n");
 	else
-		ft_putstr("ft_strcmp fonctionne on va maintenant verifier que la longueur est bien de 14");
-	
+		ft_putstr("ft_strcmp en erreur on va maintenant verifier que la longueur est bien de 14\n");
+	if (ft_strlen(str) == 14)
+		ft_putstr("ft_strlen fonctionne fin des premiers tests on passe a la suite\n"); 
+	else 
+	ft_putstr("erreur sur ft_strlen fin des premiers tests on passe a la suite dans test 1\n");
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 23:24:12 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/25 01:12:12 by allauren         ###   ########.fr       */
+/*   Updated: 2017/10/25 23:54:02 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char	*ft_strmap(char const *s, char (*f)(char));
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
+int		ft_atoi(char *str);
 
 #endif
