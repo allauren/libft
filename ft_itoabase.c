@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-char	*ft_recursive(char *str, long jack,int base,long i)
+
+void	ft_recursive(char *str, long jack,int base,long i)
 {
 	if (jack < 0)
 	{
@@ -31,7 +32,6 @@ char	*ft_recursive(char *str, long jack,int base,long i)
 	else
 		*str = jack  - 10 + 'A';
 		*(str + 1) = '\0';
-	return(str);
 }
 
 char*	ft_itoabase(int nb, int base)
@@ -46,6 +46,8 @@ char*	ft_itoabase(int nb, int base)
 	i = 1;
 	neg = 0;
 	count = 0;
+	if (nb == 0)
+		return ("0");
 	if(nb < 0)
 		neg = 1;
 	while (i <= jack || (i * -neg) >= jack)
