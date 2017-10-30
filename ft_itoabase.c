@@ -34,21 +34,19 @@ void	ft_recursive(char *str, long jack,int base,long i)
 		*(str + 1) = '\0';
 }
 
-char*	ft_itoabase(int nb, int base)
+char*	ft_itoabase(int jack, int base)
 {
-	long	jack;
 	long	i;
 	int		neg;
 	char	*str;
 	int		count;
 
-	jack = nb;
 	i = 1;
 	neg = 0;
 	count = 0;
-	if (nb == 0)
+	if (jack == 0)
 		return ("0");
-	if(nb < 0)
+	if(jack < 0)
 		neg = 1;
 	while (i <= jack || (i * -neg) >= jack)
 	{
