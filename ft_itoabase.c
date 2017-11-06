@@ -6,13 +6,13 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 03:21:03 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 16:44:07 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 21:13:35 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_recursive(char *str, long jack, int base, long i)
+static void	ft_recursive(char *str, long jack, int base, long i)
 {
 	if (jack < 0)
 	{
@@ -34,7 +34,7 @@ void	ft_recursive(char *str, long jack, int base, long i)
 	*(str + 1) = '\0';
 }
 
-char	*ft_itoabase(int jack, int base)
+char		*ft_itoabase(int jack, int base)
 {
 	long	i;
 	int		neg;

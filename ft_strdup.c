@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 21:25:53 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 16:56:21 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 21:45:31 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	char	*ptr;
 
 	i = 0;
-	if (!(ptr = (char*)malloc(sizeof(char) * (strlen(s1) + 1))))
+	if (!(ptr = (char*)malloc(sizeof(char) * (ft_strlen((char*)s1) + 1))))
 		return (0);
 	while (s1[i])
 	{

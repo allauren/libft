@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 21:40:27 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 17:05:24 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 21:44:04 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 		((unsigned char*)dest)[i] = ptr[i];
 		i++;
 	}
-	free(ptr);
 	return (((unsigned char*)dest));
 }

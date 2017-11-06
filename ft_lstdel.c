@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/06 00:59:38 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 23:13:48 by allauren         ###   ########.fr       */
+/*   Created: 2017/11/06 22:27:19 by allauren          #+#    #+#             */
+/*   Updated: 2017/11/06 23:05:39 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(char *str)
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	unsigned int i;
+	t_list	*temp;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (alst && *alst)
+	{
+		while (*alst)
+		{
+			temp = *alst;
+			(*del)((*alst)->content, (*alst)->content_size);
+			*alst = (*alst)->next;
+			free(temp);
+		}
+	}
+	alst = NULL;
 }
