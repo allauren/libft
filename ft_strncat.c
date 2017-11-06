@@ -6,28 +6,28 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 21:57:07 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/10 22:43:28 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 17:51:45 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char * dest, const char *src, size_t num)
+char	*ft_strncat(char *dest, const char *src, size_t num)
 {
 	unsigned int i;
 	unsigned int j;
 
 	i = 0;
 	j = 0;
-	while(dest[i])
+	while (dest[i])
 		i++;
-	while(src[j] && j < num)
+	while (src[j] && j < num)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	if( j != num)
-	dest[i] = src[i];
+	if (j != num)
+		dest[i] = src[i];
 	return (dest);
 }

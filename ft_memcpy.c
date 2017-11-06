@@ -6,13 +6,13 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 00:23:28 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/06 00:56:06 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 16:47:18 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void* dest, const void* src, size_t count)
+void	*ft_memcpy(void *dest, const void *src, size_t count)
 {
 	size_t	i;
 

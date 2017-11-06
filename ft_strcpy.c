@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 22:39:30 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/09 22:44:45 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 16:55:51 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ char	*ft_strcpy(char *dest, const char *src)
 		dest[i] = src[i];
 		i++;
 	}
-		dest[i] = src[i];
+	dest[i] = src[i];
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 23:47:09 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/26 02:44:34 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 20:45:48 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putnbr(int nb)
 	}
 	while (i <= jack)
 		i = i * 10;
-	while(jack > 9)
+	while (jack > 9)
 	{
 		i = i / 10;
 		ft_putchar(jack / i + '0');

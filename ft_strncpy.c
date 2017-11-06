@@ -6,23 +6,23 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 21:58:05 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/10 22:16:50 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 19:16:31 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy (char * dest, const char *src, size_t num)
+char	*ft_strncpy(char *dest, const char *src, size_t num)
 {
 	unsigned int	i;
 
 	i = 0;
-	while(i < num && src[i])
+	while (i < num && src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	while(i < num)
+	while (i < num)
 	{
 		dest[i] = '\0';
 		i++;

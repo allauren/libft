@@ -6,25 +6,24 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 23:08:34 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/10 23:28:24 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 17:53:05 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char * str, int character)
+char	*ft_strrchr(char *str, int character)
 {
-	int i;
-	char *ret;
+	int		i;
+	char	*ret;
 
 	i = 0;
 	ret = NULL;
-	while(str[i])
+	while (str[i])
 	{
-		if(ft_strchr(&str[i], character))
-		ret = ft_strchr(&str[i], character);
+		if (ft_strchr(&str[i], character))
+			ret = ft_strchr(&str[i], character);
 		i++;
 	}
 	return (ret);
 }
-

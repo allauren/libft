@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 21:42:01 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/10 21:56:45 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 16:54:10 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strcat(char *dest, const char *src)
 
 	i = 0;
 	j = 0;
-	while(dest[i])
+	while (dest[i])
 		i++;
-	while(src[j])
+	while (src[j])
 	{
 		dest[i] = src[j];
 		i++;

@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 22:55:38 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/10 23:25:39 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 16:54:24 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strchr(char *str, int c)
 	int i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
-		if(str[i] == c)
+		if (str[i] == c)
 			return (&str[i]);
 		i++;
 	}

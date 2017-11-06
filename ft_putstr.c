@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 23:44:49 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/05 23:46:58 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 16:53:02 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr(char *str)
 	int i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		ft_putchar(str[i]);
 		i++;

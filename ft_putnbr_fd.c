@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/11 02:27:01 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 16:56:54 by allauren         ###   ########.fr       */
+/*   Created: 2017/11/06 20:21:11 by allauren          #+#    #+#             */
+/*   Updated: 2017/11/06 20:45:40 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	unsigned int i;
+	long jack;
+	long i;
 
-	i = 0;
-	if (!s1 || !s2 || ft_strlen((char*)s1) != ft_strlen((char*)s2))
-		return (0);
-	while (s1[i])
+	jack = nb;
+	i = 1;
+	if (nb < 0)
 	{
-		if (s1[i] != s2[i])
-			return (0);
-		i++;
+		jack = -jack;
+		ft_putchar_fd('-', fd);
 	}
-	return (1);
+	while (i <= jack)
+		i = i * 10;
+	while (jack > 9)
+	{
+		i = i / 10;
+		ft_putchar_fd(jack / i + '0', fd);
+		jack = jack % i;
+	}
+	ft_putchar_fd(jack / 1 + '0', fd);
 }

@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 21:22:51 by allauren          #+#    #+#             */
-/*   Updated: 2017/10/09 21:38:44 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/06 16:46:48 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	while (i < num)
 	{
 		if (((unsigned char*)ptr1)[i] != ((unsigned char*)ptr2)[i])
-			return (((unsigned char*) ptr1)[i] - ((unsigned char*)ptr2)[i]);
+			return (((unsigned char*)ptr1)[i] - ((unsigned char*)ptr2)[i]);
 		i++;
 	}
 	return (0);
