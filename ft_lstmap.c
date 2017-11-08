@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 22:48:20 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/08 14:15:45 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:57:30 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*begin;
 
 	tmp = f(lst);
-	if(!lst || !f)
+	if (!lst || !f)
 		return (NULL);
 	if (!(flw = ft_lstnew(tmp->content, tmp->content_size)))
 		return (NULL);
