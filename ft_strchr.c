@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 22:55:38 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 16:54:24 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/07 23:27:59 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ char	*ft_strchr(char *str, int c)
 			return (&str[i]);
 		i++;
 	}
+	if (!str[i] && c == '\0')
+		return (&str[i]);
 	return (NULL);
 }

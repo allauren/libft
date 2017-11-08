@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 06:45:53 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/08 06:46:12 by allauren         ###   ########.fr       */
+/*   Created: 2017/09/06 07:54:44 by allauren          #+#    #+#             */
+/*   Updated: 2017/11/08 06:36:45 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nb)
+int		main(int argc, char **argv)
 {
-	long i;
+	int		i;
+	int		j;
 
-	i = 1;
-	if (nb == -2147483648)
-		ft_putstr("-2147483648");
-	else
+	i = 0;
+	j = 0;
+	if (argc != 1)
 	{
-		if (nb < 0)
+		while (i < argc)
+			i++;
+		while (i > 1)
 		{
-			nb = -nb;
-			ft_putchar('-');
+			i--;
+			while (argv[i][j] != '\0')
+			{
+				ft_putchar(argv[i][j]);
+				j++;
+			}
+			ft_putchar('\n');
+			j = 0;
 		}
-		while (i <= nb)
-			i = i * 10;
-		while (i > 10)
-		{
-			i = i / 10;
-			ft_putchar(nb / i + '0');
-			nb = nb % i;
-		}
-		ft_putchar(nb % 10 + '0');
 	}
+	return (0);
 }

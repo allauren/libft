@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 00:39:22 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 16:44:24 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/08 00:20:10 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 void	*ft_memalloc(size_t size)
 {
 	char	*ptr;
+	size_t	i;
 
-	if (!(ptr = (char*)malloc(sizeof(char) * (size + 1))))
+	i = 0;
+	if (!(ptr = (char*)malloc(sizeof(char) * size)))
 		return (NULL);
+	ft_memset(ptr, 0, size);
 	return (ptr);
 }

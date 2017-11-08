@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 03:21:03 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 21:13:35 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/08 06:35:36 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	ft_recursive(char *str, long jack, int base, long i)
 		*str = '-';
 		return (ft_recursive((str + 1), -jack, base, i));
 	}
-	if (jack >= base)
+	if (i >= base)
 	{
 		if ((jack / i) < 10)
 			*str = jack / i + '0';
@@ -31,7 +31,6 @@ static void	ft_recursive(char *str, long jack, int base, long i)
 		*str = jack + '0';
 	else
 		*str = jack - 10 + 'A';
-	*(str + 1) = '\0';
 }
 
 char		*ft_itoabase(int jack, int base)
@@ -44,9 +43,7 @@ char		*ft_itoabase(int jack, int base)
 	i = 1;
 	neg = 0;
 	count = 0;
-	if (jack == 0)
-		return ("0");
-	if (jack < 0)
+	if (jack <= 0)
 		neg = 1;
 	while (i <= jack || (i * -neg) >= jack)
 	{
@@ -55,6 +52,11 @@ char		*ft_itoabase(int jack, int base)
 	}
 	if (!(str = (char*)malloc(sizeof(char) * (count + neg + 1))))
 		return (NULL);
+	if (jack == 0)
+		return ("0");
 	ft_recursive(str, jack, base, (i / base));
+	str[count + neg] = '\0';
+	if (jack == 0)
+		str = "0";
 	return (str);
 }

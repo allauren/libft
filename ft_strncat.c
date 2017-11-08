@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 21:57:07 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 17:51:45 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/08 01:14:45 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strncat(char *dest, const char *src, size_t num)
 		i++;
 		j++;
 	}
-	if (j != num)
-		dest[i] = src[i];
+	dest[i] = '\0';
 	return (dest);
 }

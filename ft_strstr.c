@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 00:14:38 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 17:43:10 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/07 17:48:41 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char	*ft_strstr(char *str1, const char *str2)
 
 	j = 0;
 	i = 0;
+	if (!str2[i])
+		return (str1);
 	while (str1[i])
 	{
-		if (str1[i] == str2[j])
+		if (!str2 || str1[i] == str2[j])
 		{
 			while (str2[j] && str1[i + j] == str2[j])
 				j++;

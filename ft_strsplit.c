@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 02:28:33 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 21:14:25 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:23:38 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_countwords(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 	}
-	return (count);
+	return (count + 1);
 }
 
 static int	ft_sizeword(char const *s, char c)
@@ -48,7 +48,7 @@ char		**ft_strsplit(char const *s, char c)
 
 	i[0] = 0;
 	i[1] = 0;
-	if (!(t = (char**)malloc(sizeof(char*) * (ft_countwords(s, c)))))
+	if (!s || !(t = (char**)malloc(sizeof(char*) * (ft_countwords(s, c)))))
 		return (NULL);
 	while (s[i[0]] && s[i[0]] == c)
 		i[0]++;
@@ -58,7 +58,8 @@ char		**ft_strsplit(char const *s, char c)
 		if (!(t[i[1]] = (char*)malloc(sizeof(char) * ft_sizeword(&s[i[0]], c))))
 			return (NULL);
 		t[i[1]] = ft_strncpy(t[i[1]], &s[i[0]], (ft_sizeword(&s[i[0]], c) - 1));
-		i[0] = i[0] + ft_sizeword(&s[i[0]], c) + 1;
+		t[i[1]][ft_sizeword(&s[i[0]], c) - 1] = '\0';
+		i[0] = i[0] + ft_sizeword(&s[i[0]], c) - 1;
 		while (s[i[0]] && s[i[0]] == c)
 			i[0]++;
 		i[1]++;

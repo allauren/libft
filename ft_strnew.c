@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 00:47:38 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/06 17:56:00 by allauren         ###   ########.fr       */
+/*   Updated: 2017/11/07 09:38:40 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strnew(size_t size)
 	char			*slptr;
 
 	i = 0;
-	slptr = (char*)malloc(sizeof(char) * (size + 1));
+	if (!(slptr = (char*)malloc(sizeof(char) * (size + 1))))
+		return (NULL);
 	while (i < size)
 	{
 		slptr[i] = '\0';
