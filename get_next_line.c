@@ -6,13 +6,13 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:41:10 by allauren          #+#    #+#             */
-/*   Updated: 2017/12/07 08:52:05 by allauren         ###   ########.fr       */
+/*   Updated: 2017/12/07 09:04:35 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static int	ft_cpy(void *dest, void *src, size_t count, t_decla s)
+static int	ft_cpy(void *dest, void *src, size_t count, t_gnl s)
 {
 	size_t			i;
 	unsigned int	j;
@@ -37,7 +37,7 @@ static int	ft_cpy(void *dest, void *src, size_t count, t_decla s)
 	return (s.end);
 }
 
-static int	ft_reste(char **line, t_decla s, t_list **rest)
+static int	ft_reste(char **line, t_gnl s, t_list **rest)
 {
 	if (*rest && ((*rest)->content))
 	{
@@ -56,7 +56,7 @@ static int	ft_reste(char **line, t_decla s, t_list **rest)
 	return (s.end);
 }
 
-static int	ft_list_copie(t_list *begin, t_list *cpy, char **line, t_decla s)
+static int	ft_list_copie(t_list *begin, t_list *cpy, char **line, t_gnl s)
 {
 	t_list			*prev;
 
@@ -84,10 +84,10 @@ static int	ft_list_copie(t_list *begin, t_list *cpy, char **line, t_decla s)
 
 int			get_next_line(const int fd, char **line)
 {
-	t_decla			s;
+	t_gnl			s;
 	t_list static	*rest = NULL;
 
-	ft_bzero(&s, sizeof(t_decla));
+	ft_bzero(&s, sizeof(t_gnl));
 	if (rest && (ft_memchr(rest->content, EOL, LEN(rest->content))))
 		s.mal = 1;
 	while (!s.mal && (s.rt = read(fd, s.buf, BUFF_SIZE)) > 0)

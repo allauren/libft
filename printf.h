@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 10:27:47 by allauren          #+#    #+#             */
-/*   Updated: 2017/12/01 08:32:34 by allauren         ###   ########.fr       */
+/*   Updated: 2017/12/07 09:04:29 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "libft/libft.h"
 # include <wchar.h>
 # include <locale.h>
+# include "get_next_line.h"
 # define TYPE  "sSpdDioOuUxXcC%"
 
 typedef struct				s_option

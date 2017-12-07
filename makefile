@@ -6,7 +6,7 @@
 #    By: allauren <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 22:27:21 by allauren          #+#    #+#              #
-#    Updated: 2017/12/07 08:57:24 by allauren         ###   ########.fr        #
+#    Updated: 2017/12/07 09:05:32 by allauren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ INCLUDES = printf.h
 CC = gcc
 LIBOPTIMIZER = ranlib
 OBJS = $(SRCS:.c=.o)
-NAME = libftprintf.a
+NAME = libft.a
 LIBFT = libft/libft.a
 
 all: $(NAME)
