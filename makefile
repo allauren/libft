@@ -6,7 +6,7 @@
 #    By: allauren <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 22:27:21 by allauren          #+#    #+#              #
-#    Updated: 2017/12/07 09:05:32 by allauren         ###   ########.fr        #
+#    Updated: 2017/12/17 07:52:37 by allauren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,20 +25,20 @@ LIBFT = libft/libft.a
 
 all: $(NAME)
 $(NAME): $(LIBFT) $(OBJS) $(INCLUDES)
-	@cp $(LIBFT) $(NAME)
-	@ar rc $(NAME) $(OBJS)
-	@$(LIBOPTIMIZER) $(NAME)
+	cp $(LIBFT) $(NAME)
+	ar rc $(NAME) $(OBJS)
+	$(LIBOPTIMIZER) $(NAME)
 $(LIBFT):
-	@$(MAKE) -C libft/
+	$(MAKE) -C libft/
 %.o: %.c
-	@$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@
 clean:
-	@$(MAKE) -C libft/ clean
-	@rm -f $(OBJS)
+	$(MAKE) -C libft/ clean
+	rm -f $(OBJS)
 
 fclean: clean
-	@$(MAKE) -C libft/ fclean
-	@rm -f $(NAME)
+	$(MAKE) -C libft/ fclean
+	rm -f $(NAME)
 re: fclean all
 .PHONY: all clean fclean re
-	# **************************************************************************** #
+# **************************************************************************** #
