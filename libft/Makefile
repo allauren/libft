@@ -6,14 +6,13 @@
 #    By: allauren <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/06 00:46:43 by allauren          #+#    #+#              #
-#    Updated: 2017/11/29 00:02:19 by allauren         ###   ########.fr        #
+#    Updated: 2017/12/17 09:22:30 by allauren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-NAME = libft.a
-FLAGS = -Wall -Wextra -Werror 
 
 SRC =ft_atoi.c\
-	 ft_rev_params.c\
+	 ft_alexis.c\
+	ft_rev_params.c\
 	ft_bzero.c\
 	ft_isalpha.c\
 	ft_isdigit.c\
@@ -74,20 +73,26 @@ SRC =ft_atoi.c\
 	ft_strtrim.c\
 	ft_strsplit.c\
 
+NAME = libft.a
+CFLAGS = -c -Wall -Wextra -Werror 
 OBJ = $(SRC:.c=.o)
+INCLUDES = .
+CC = gcc
 
 all: $(NAME)
 
-$(NAME):
-	@gcc -c $(FLAGS) $(SRC)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
+$(NAME): $(OBJ) $(INCLUDES)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	@rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 

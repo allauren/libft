@@ -6,13 +6,13 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/24 01:38:15 by allauren          #+#    #+#             */
-/*   Updated: 2017/11/28 23:32:05 by allauren         ###   ########.fr       */
+/*   Updated: 2017/12/17 08:20:12 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+long		ft_atoi(const char *str)
 {
 	long	i;
 	long	jack;
@@ -34,5 +34,5 @@ int		ft_atoi(const char *str)
 		jack = str[i] - '0' + jack;
 		i++;
 	}
-	return ((int)(jack * neg));
+	return ((jack * neg));
 }

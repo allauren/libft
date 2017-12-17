@@ -6,7 +6,7 @@
 /*   By: allauren <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:41:10 by allauren          #+#    #+#             */
-/*   Updated: 2017/12/07 09:04:35 by allauren         ###   ########.fr       */
+/*   Updated: 2017/12/17 12:28:13 by allauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,7 @@ static int	ft_reste(char **line, t_gnl s, t_list **rest)
 	{
 		ft_lstadd(&(*rest), ft_lstnew(s.ptr, LEN(s.ptr) + 1));
 	}
-	else
-		free(s.ptr);
+	ft_strdel(&(s.ptr));
 	return (s.end);
 }
 
